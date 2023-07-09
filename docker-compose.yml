@@ -3,7 +3,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - 8082:82
+      - 8080:80
     volumes:
       - ./nginx/default.conf:/nginx/default.conf
       - ./php:/var/www/html

@@ -1,0 +1,16 @@
+services:
+  jenkins:
+    container_name: jenkins_blue_ocean
+    image: jenkins/jenkins:alpine
+    ports:
+      - "8081:8080"
+      - "50001:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    restart: always
+    networks:
+      - net_jenkins
+volumes:
+  jenkins_home:
+networks:
+  net_jenkins:

@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage('jenkins') {
+    stage('jenkins') { 
       steps {
         sh '''
           echo 1234 | sudo -S docker compose up -d --build
